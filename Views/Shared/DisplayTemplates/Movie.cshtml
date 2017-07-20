@@ -1,0 +1,29 @@
+﻿@model Movie
+@{
+    Layout = null;
+}
+<div class="col-sm-6">
+    <div class="row">
+        <div class="col-xs-12">
+            <h4>@Model.Title</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <img src="@Model.Poster.First().Url" class="img-responsive" alt="@Model.Poster.First().Name" />
+        </div>
+        <div class="col-sm-8">
+            Name: @Model.System.Name
+            <br />
+            Year: @Model.Year
+            <br />
+            Genre: @Model.Genre.First().Name
+            @if (Model.Link != null) {
+                <br />
+                <br />
+            <a class="btn btn-sm btn-primary" href="@Model.Link" target="_blank" role="button">Link</a>
+            }
+        </div>
+    </div>
+    <br />
+</div>

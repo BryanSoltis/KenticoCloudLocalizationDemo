@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Movie>
+@{
+    ViewData["Title"] = "Home Page";
+}
+<!--
+<div class="header clearfix">
+    <nav>
+        <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="/">Home</a></li>
+            <li role="presentation"><a href="https://kenticocloud.com/" target="_blank">Kentico Cloud</a></li>
+            <li role="presentation"><a href="https://app.kenticocloud.com/sign-up" target="_blank">Sign up</a></li>
+        </ul>
+    </nav>
+    <h3 class="text-muted">Kentico Cloud Localization Demo</h3>
+</div>
+<div class="jumbotron">
+    <h1>Movies</h1>
+    <p class="lead">This site is a demo for the Kentico Cloud Localization functionality. It was built using the Kentico Cloud .NET Boilerplate project.</p>
+    <p><a class="btn btn-lg btn-success" href="https://github.com/getstarted/cloud-boilerplate-net#quick-start" target="_blank" role="button">Read the Quick Start</a></p>
+</div>
+-->
+<div class="row marketing">
+    <div style="float:left;">
+        <h2>Movies</h2>
+    </div>
+    <div style="float:right;">
+        <a href="/">English</a> | <a href="/cs-CZ">Czech</a> | <a href="/fr-FR">French</a>
+    </div>
+    <div style="clean:both;"></div>
+</div>
+<div class="row marketing">
+    @*
+        This MVC helper method ensures that current model is rendered
+        with suitable view from /Views/Shared/DisplayTemplates
+    *@
+    @Html.DisplayForModel()
+</div>
